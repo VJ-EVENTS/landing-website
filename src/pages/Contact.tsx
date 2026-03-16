@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Instagram, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { resolve } from "path";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -15,10 +16,41 @@ const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [status, setStatus] = useState<
+    "idle" | "submitting" | "success" | "error"
+  >("idle");
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const mailtoLink = `mailto:user892342@gmail.com?subject=Wedding Enquiry from ${formData.name}&body=Name: ${formData.name}%0AEmail: ${formData.email}%0APhone: ${formData.phone}%0AWedding Date: ${formData.date}%0AGuests: ${formData.guests}%0AMessage: ${formData.message}`;
-    window.location.href = mailtoLink;
+    setStatus("submitting");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      console.log(response);
+
+      if (!response.ok) {
+        throw new Error("Failed to submit form");
+      }
+
+      setStatus("success");
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        date: "",
+        guests: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error(error);
+      setStatus("error");
+    }
   };
 
   return (
@@ -201,11 +233,22 @@ const Contact = () => {
                 </div>
                 <Button
                   type="submit"
-                  className="w-full bg-gold hover:bg-gold-light text-primary font-semibold py-6"
+                  disabled={status === "submitting"}
+                  className="w-full bg-gold hover:bg-gold-light text-primary font-semibold py-6 disabled:opacity-70"
                 >
                   <Send className="h-4 w-4 mr-2" />
-                  Send Enquiry
+                  {status === "submitting" ? "Sending..." : "Send Enquiry"}
                 </Button>
+                {status === "success" && (
+                  <p className="text-sm text-green-600">
+                    Thank you! Your enquiry has been sent.
+                  </p>
+                )}
+                {status === "error" && (
+                  <p className="text-sm text-red-600">
+                    Something went wrong. Please try again later.
+                  </p>
+                )}
               </form>
             </motion.div>
           </div>
