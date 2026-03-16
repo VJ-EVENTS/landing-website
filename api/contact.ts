@@ -20,17 +20,17 @@ export default async function handler(req: any, res: any) {
   }
   try {
     const transporter = nodemailer.createTransport({
-      host: 'smtp.gmail.com',
-      port: 465,
+      host: process.env.SMTP_HOST,
+      port: Number(process.env.SMTP_PORT),
       secure: true,
       auth: {
-        user: 'lalit.adhikari0512@gmail.com',
-        pass: 'pcvijaiceotdhmku',
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
       },
     });
 
     await transporter.sendMail({
-      from: process.env.SMTP_FROM || process.env.SMTP_USER,
+      from: process.env.SMTP_FROM,
       to: "user892342@gmail.com",
       subject: `New Wedding Enquiry – ${name}`,
       text: `
