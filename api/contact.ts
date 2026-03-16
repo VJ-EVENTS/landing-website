@@ -6,18 +6,37 @@ export default async function handler(req: any, res: any) {
     return res.status(405).json({ error: "Method not allowed" });
   }
 
-  const { name, email, phone, date, guests, message } = req.body as {
+  const {
+    name,
+    email,
+    phone,
+    date,
+    guestRange,
+    budget,
+    weddingType,
+    services,
+    message,
+  } = req.body as {
     name: string;
     email: string;
     phone: string;
-    date: string;
-    guests: string;
-    message: string;
+    date?: string;
+    guestRange?: string;
+    budget?: string;
+    weddingType?: string;
+    services?: string[];
+    message?: string;
   };
 
-  if (!name || !email || !phone || !message) {
+  if (!name || !email || !phone) {
     return res.status(400).json({ error: "Missing required fields" });
   }
+
+  const servicesList =
+    Array.isArray(services) && services.length > 0
+      ? services.join(", ")
+      : "Not specified";
+
   try {
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
@@ -29,60 +48,63 @@ export default async function handler(req: any, res: any) {
       },
     });
 
+    const row = (label: string, value: string) => `
+      <tr>
+        <td style="padding:8px 10px;font-weight:600;width:180px;background:#f3f4f6;vertical-align:top;">${label}</td>
+        <td style="padding:8px 10px;background:#f9fafb;">${value}</td>
+      </tr>`;
+
     await transporter.sendMail({
       from: process.env.SMTP_FROM,
       to: "user892342@gmail.com",
-      subject: `New Wedding Enquiry – ${name}`,
+      subject: `New Wedding Enquiry – ${name} | ${budget || "Budget N/A"} | ${guestRange || "Guests N/A"}`,
       text: `
-New wedding enquiry from your website:
+New Wedding Enquiry from VJ Events Website
 
-Name: ${name}
-Email: ${email}
-Phone: ${phone}
-Wedding Date: ${date || "Not specified"}
-Guests: ${guests || "Not specified"}
+Name:          ${name}
+Phone:         ${phone}
+Email:         ${email}
+Wedding Date:  ${date || "Not specified"}
+Guest Count:   ${guestRange || "Not specified"}
+Budget:        ${budget || "Not specified"}
+Event Type:    ${weddingType || "Not specified"}
+Services:      ${servicesList}
 
 Message:
-${message}
+${message || "No message provided."}
       `.trim(),
       html: `
-        <div style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; color: #111827;">
-          <h2 style="margin-bottom: 16px; font-size: 20px; color: #111827;">
-            New Wedding Enquiry from Your Website
-          </h2>
-          <table style="border-collapse: collapse; width: 100%; max-width: 600px; margin-bottom: 24px;">
-            <tbody>
-              <tr>
-                <td style="padding: 6px 8px; font-weight: 600; width: 160px; background: #f3f4f6;">Name</td>
-                <td style="padding: 6px 8px; background: #f9fafb;">${name}</td>
-              </tr>
-              <tr>
-                <td style="padding: 6px 8px; font-weight: 600; background: #f3f4f6;">Email</td>
-                <td style="padding: 6px 8px; background: #f9fafb;">${email}</td>
-              </tr>
-              <tr>
-                <td style="padding: 6px 8px; font-weight: 600; background: #f3f4f6;">Phone</td>
-                <td style="padding: 6px 8px; background: #f9fafb;">${phone}</td>
-              </tr>
-              <tr>
-                <td style="padding: 6px 8px; font-weight: 600; background: #f3f4f6;">Wedding Date</td>
-                <td style="padding: 6px 8px; background: #f9fafb;">${date || "Not specified"}</td>
-              </tr>
-              <tr>
-                <td style="padding: 6px 8px; font-weight: 600; background: #f3f4f6;">Guests</td>
-                <td style="padding: 6px 8px; background: #f9fafb;">${guests || "Not specified"}</td>
-              </tr>
-            </tbody>
-          </table>
-          <div>
-            <div style="font-weight: 600; margin-bottom: 4px;">Wedding Vision / Message</div>
-            <div style="padding: 12px 14px; background: #f9fafb; border-radius: 6px; white-space: pre-wrap;">
-              ${message || "No additional message provided."}
-            </div>
+        <div style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.7;color:#111827;max-width:640px;">
+          <div style="background:#1a3a2a;padding:24px 28px;border-radius:8px 8px 0 0;">
+            <h2 style="margin:0;font-size:22px;color:#ffffff;">New Wedding Enquiry</h2>
+            <p style="margin:6px 0 0;font-size:14px;color:#d4af37;">VJ Events — Jim Corbett</p>
           </div>
-          <p style="margin-top: 24px; font-size: 12px; color: #6b7280;">
-            This enquiry was submitted via the VJ Events website contact form.
-          </p>
+
+          <div style="background:#ffffff;padding:24px 28px;border:1px solid #e5e7eb;border-top:none;border-radius:0 0 8px 8px;">
+            <table style="border-collapse:collapse;width:100%;margin-bottom:24px;font-size:14px;">
+              <tbody>
+                ${row("Name", name)}
+                ${row("Phone / WhatsApp", phone)}
+                ${row("Email", email)}
+                ${row("Wedding Date", date || "Not specified")}
+                ${row("Guest Count", guestRange || "Not specified")}
+                ${row("Budget", budget || "Not specified")}
+                ${row("Event Type", weddingType || "Not specified")}
+                ${row("Services Needed", servicesList)}
+              </tbody>
+            </table>
+
+            <div style="margin-top:16px;">
+              <div style="font-weight:600;margin-bottom:6px;font-size:14px;">Additional Message</div>
+              <div style="padding:12px 14px;background:#f9fafb;border-radius:6px;white-space:pre-wrap;font-size:14px;color:#374151;">
+                ${message || "No additional message provided."}
+              </div>
+            </div>
+
+            <p style="margin-top:24px;font-size:12px;color:#9ca3af;">
+              Submitted via the VJ Events website contact form.
+            </p>
+          </div>
         </div>
       `.trim(),
     });
@@ -93,4 +115,3 @@ ${message}
     return res.status(500).json({ error: "Failed to send email" });
   }
 }
-
