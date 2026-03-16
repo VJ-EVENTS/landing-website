@@ -1,6 +1,7 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
+import { Analytics } from "@vercel/analytics/react";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -29,7 +30,10 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
-            <Route path="/destination-weddings" element={<DestinationWeddings />} />
+            <Route
+              path="/destination-weddings"
+              element={<DestinationWeddings />}
+            />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/venues" element={<Venues />} />
             <Route path="/faq" element={<FAQ />} />
@@ -38,6 +42,7 @@ const App = () => (
             <Route path="/things-to-do" element={<ThingsToDo />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <Analytics />
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
