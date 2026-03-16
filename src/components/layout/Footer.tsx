@@ -10,12 +10,16 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <Link to="/" className="flex items-center gap-3 mb-4">
-              <img src={vjLogo} alt="VJ Events" className="h-10 w-10 object-contain" />
+              <img
+                src={vjLogo}
+                alt="VJ Events"
+                className="h-10 w-10 object-contain"
+              />
               <span className="text-2xl font-display font-bold">VJ Events</span>
             </Link>
             <p className="text-primary-foreground/70 text-sm leading-relaxed mb-4">
-              Luxury destination wedding planner and event production company specializing in
-              weddings and resort events in Jim Corbett National Park.
+              Destination wedding planner in Jim Corbett. We handle decor, food,
+              DJ, guest management, and everything for your wedding.
             </p>
             <a
               href="https://www.instagram.com/vj_events__"
@@ -30,19 +34,28 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-display text-xl font-semibold text-gold mb-4">Quick Links</h3>
+            <h3 className="font-display text-xl font-semibold text-gold mb-4">
+              Quick Links
+            </h3>
             <ul className="space-y-2">
               {[
-                { label: "About Us", href: "/about" },
+                { label: "How We Plan", href: "/about" },
                 { label: "Our Services", href: "/services" },
-                { label: "Destination Weddings", href: "/destination-weddings" },
+                {
+                  label: "Destination Weddings",
+                  href: "/destination-weddings",
+                },
                 { label: "Gallery", href: "/gallery" },
+                { label: "Packages & Pricing", href: "/packages" },
                 { label: "Wedding Venues", href: "/venues" },
                 { label: "Blog", href: "/blog" },
                 { label: "FAQ", href: "/faq" },
               ].map((link) => (
                 <li key={link.href}>
-                  <Link to={link.href} className="text-sm text-primary-foreground/70 hover:text-gold transition-colors">
+                  <Link
+                    to={link.href}
+                    className="text-sm text-primary-foreground/70 hover:text-gold transition-colors"
+                  >
                     {link.label}
                   </Link>
                 </li>
@@ -52,7 +65,9 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h3 className="font-display text-xl font-semibold text-gold mb-4">Our Services</h3>
+            <h3 className="font-display text-xl font-semibold text-gold mb-4">
+              Our Services
+            </h3>
             <ul className="space-y-2 text-sm text-primary-foreground/70">
               <li>Destination Wedding Planning</li>
               <li>Wedding Decor & Design</li>
@@ -66,22 +81,31 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h3 className="font-display text-xl font-semibold text-gold mb-4">Contact Us</h3>
+            <h3 className="font-display text-xl font-semibold text-gold mb-4">
+              Contact Us
+            </h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-gold mt-0.5 shrink-0" />
                 <span className="text-sm text-primary-foreground/70">
-                  Jim Corbett National Park, Ramnagar, Nainital, Uttarakhand, India
+                  Jim Corbett National Park, Ramnagar, Nainital, Uttarakhand,
+                  India
                 </span>
               </li>
               <li>
-                <a href="tel:+916398877687" className="flex items-center gap-3 text-sm text-primary-foreground/70 hover:text-gold transition-colors">
+                <a
+                  href="tel:+916398877687"
+                  className="flex items-center gap-3 text-sm text-primary-foreground/70 hover:text-gold transition-colors"
+                >
                   <Phone className="h-5 w-5 text-gold shrink-0" />
                   +91 6398877687
                 </a>
               </li>
               <li>
-                <a href="mailto:vjevents@gmail.com" className="flex items-center gap-3 text-sm text-primary-foreground/70 hover:text-gold transition-colors">
+                <a
+                  href="mailto:vjevents@gmail.com"
+                  className="flex items-center gap-3 text-sm text-primary-foreground/70 hover:text-gold transition-colors"
+                >
                   <Mail className="h-5 w-5 text-gold shrink-0" />
                   vjevents@gmail.com
                 </a>
@@ -95,7 +119,7 @@ const Footer = () => {
             © {new Date().getFullYear()} VJ Events. All rights reserved.
           </p>
           <p className="text-sm text-primary-foreground/50">
-            Luxury Destination Weddings in Jim Corbett, Uttarakhand
+            Destination Weddings in Jim Corbett, Uttarakhand
           </p>
         </div>
       </div>

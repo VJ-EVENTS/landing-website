@@ -22,11 +22,11 @@ const CTASection = () => {
             Start Planning
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-primary-foreground mb-6">
-            Ready to Plan Your Dream Wedding?
+            Ready to Plan Your Wedding?
           </h2>
           <p className="text-primary-foreground/70 text-lg mb-10 leading-relaxed">
-            Let VJ Events transform your vision into reality. Get in touch today for a
-            free consultation and let us craft the perfect destination wedding for you.
+            Tell us your budget and guest count — we'll plan the perfect wedding
+            for you in Jim Corbett. Call us or fill the form for a free consultation.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">

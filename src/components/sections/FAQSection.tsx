@@ -8,28 +8,28 @@ import {
 
 const faqs = [
   {
-    q: "What is the cost of a destination wedding in Jim Corbett?",
-    a: "The cost varies depending on the guest count, venue, decor complexity, and services required. VJ Events offers customized packages starting from budget-friendly to ultra-luxury. Contact us for a personalized quote based on your vision.",
+    q: "How much does a destination wedding in Jim Corbett cost?",
+    a: "It depends on your guest count, which resort you pick, and what kind of decor and food you want. Our packages start from ₹2 Lakh for a small wedding and go up to ₹35 Lakh for a big 3-day celebration. Call us with your budget and we'll tell you what's possible.",
   },
   {
-    q: "Which resorts allow destination weddings in Jim Corbett?",
-    a: "Several premium resorts in Corbett welcome destination weddings, including properties in Dhikuli, Jhirna, and Bijrani zones. We have partnerships with top resorts to ensure the best venues and rates for your celebration.",
+    q: "Which resorts in Jim Corbett are good for weddings?",
+    a: "There are many — Maulik Mansion, The Roar Resort, Wild Crest, Brys Caves, Tarangi, Namah, Taj Corbett, and Marriott are popular ones. We work with all of them and can help you pick the right one based on your budget and guest count.",
   },
   {
-    q: "What is the best time for weddings in Corbett?",
-    a: "October to March is ideal for destination weddings in Jim Corbett, offering pleasant weather and lush green surroundings. November to February provides the best climate for outdoor ceremonies.",
+    q: "What is the best time to have a wedding in Corbett?",
+    a: "October to March is the best time. The weather is pleasant and perfect for outdoor functions like haldi, mehendi, and sangeet. November to February is especially nice with cool evenings.",
   },
   {
-    q: "Do you provide wedding decor and event setup?",
-    a: "Absolutely! We specialize in complete wedding decor including mandap design, stage setup, entrance decorations, floral arrangements, lighting design, and themed setups for all functions.",
+    q: "Do you handle decor and mandap setup?",
+    a: "Yes, we do everything — mandap design, stage decoration, flower arrangements, drapes, entrance gates, lighting, and themed setups for all functions like haldi, mehendi, sangeet, and reception.",
   },
   {
-    q: "Do you arrange cocktail bars and entertainment?",
-    a: "Yes, we provide professional molecular bar setups, signature cocktail services, DJ and sound systems, live entertainment, and themed party concepts for sangeet and cocktail nights.",
+    q: "Can you arrange DJ, bar, and entertainment?",
+    a: "Yes. We arrange DJ and sound system, bar setup with bartenders, live music, dance floor, and everything you need for sangeet and cocktail nights.",
   },
   {
-    q: "Do you provide event staff and logistics support?",
-    a: "We provide complete event workforce including setup crews, hospitality staff, coordination teams, transportation, and logistics management to ensure seamless execution of your event.",
+    q: "Do you manage guest stay and travel?",
+    a: "Yes. We help book rooms at the resort, arrange pickup from Ramnagar station or Delhi, manage room allotment, meal timing, and activities for your guests during the wedding.",
   },
 ];
 
@@ -48,7 +48,7 @@ const FAQSection = () => {
             Frequently Asked Questions
           </h2>
           <p className="text-muted-foreground">
-            Everything you need to know about planning your destination wedding in Jim Corbett.
+            Common questions about planning a wedding in Jim Corbett — answered simply.
           </p>
         </motion.div>
 

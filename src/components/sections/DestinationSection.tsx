@@ -3,10 +3,10 @@ import { TreePine, Mountain, Camera, Calendar } from "lucide-react";
 import corbettVenue from "@/assets/corbett-venue.jpg";
 
 const features = [
-  { icon: TreePine, title: "Luxury Forest Resorts", desc: "Premium resorts nestled in the heart of Jim Corbett's wilderness." },
-  { icon: Mountain, title: "Riverside Wedding Venues", desc: "Scenic venues along the Kosi River with mountain backdrops." },
-  { icon: Camera, title: "Nature Wedding Photography", desc: "Stunning natural settings for unforgettable wedding photographs." },
-  { icon: Calendar, title: "Weekend Wedding Experiences", desc: "Multi-day celebrations with jungle safaris and adventure activities." },
+  { icon: TreePine, title: "Forest Resorts", desc: "Beautiful resorts surrounded by forests — perfect for a wedding." },
+  { icon: Mountain, title: "Riverside Venues", desc: "Wedding venues along the Kosi River with mountains in the background." },
+  { icon: Camera, title: "Amazing Photo Spots", desc: "Natural settings that make your wedding photos look incredible." },
+  { icon: Calendar, title: "2–3 Day Celebrations", desc: "Haldi, mehendi, sangeet, wedding, reception — all at one resort." },
 ];
 
 const DestinationSection = () => {
@@ -26,9 +26,9 @@ const DestinationSection = () => {
               The Perfect Destination for Your Wedding
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Jim Corbett National Park is one of India's most sought-after destination wedding
-              locations. With luxury forest resorts, riverside venues, and breathtaking natural
-              beauty, it offers the perfect backdrop for an unforgettable wedding celebration.
+              Jim Corbett has everything for a destination wedding — green forests, rivers,
+              mountains, and some of the best resorts in Uttarakhand. Just 5–6 hours from
+              Delhi, it's easy for your guests to reach.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-6">

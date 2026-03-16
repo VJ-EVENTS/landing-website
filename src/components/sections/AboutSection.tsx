@@ -38,22 +38,29 @@ const AboutSection = () => {
               About VJ Events
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-6">
-              Turning Moments Into Memories
+              Your Wedding, Our Responsibility
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              VJ Events is a professional event planning and event production company
-              specializing in luxury destination weddings in Jim Corbett National Park.
-              We bring your dream wedding to life amidst the breathtaking beauty of
-              Uttarakhand's forests and luxury resorts.
+              VJ Events is a wedding planning team based in Jim Corbett. We help
+              families plan beautiful destination weddings at the best resorts
+              in Corbett — at prices that fit your budget.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              From grand mandap designs and elegant stage setups to curated cocktail
-              experiences and complete guest hospitality, we handle every detail so you
-              can focus on creating memories that last a lifetime.
+              Mandap setup, stage decoration, food, DJ, guest rooms, pickup from
+              station — we take care of everything. You and your family just
+              enjoy the wedding.
             </p>
             <ul className="grid grid-cols-2 gap-3 mb-8">
-              {["Expert Planning", "Luxury Decor", "Full Production", "Guest Services"].map((item) => (
-                <li key={item} className="flex items-center gap-2 text-sm font-medium text-foreground">
+              {[
+                "Wedding Planning",
+                "Beautiful Decor",
+                "Full Setup Team",
+                "Guest Management",
+              ].map((item) => (
+                <li
+                  key={item}
+                  className="flex items-center gap-2 text-sm font-medium text-foreground"
+                >
                   <span className="h-2 w-2 rounded-full bg-gold" />
                   {item}
                 </li>
@@ -61,7 +68,7 @@ const AboutSection = () => {
             </ul>
             <Link to="/about">
               <Button className="bg-primary hover:bg-forest-light text-primary-foreground">
-                Learn More About Us
+                See How We Plan Your Wedding
               </Button>
             </Link>
           </motion.div>

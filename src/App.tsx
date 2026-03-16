@@ -15,6 +15,8 @@ import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import ThingsToDo from "./pages/ThingsToDo";
+import Packages from "./pages/Packages";
+import EventDetail from "./pages/EventDetail";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -40,6 +42,8 @@ const App = () => (
             <Route path="/contact" element={<Contact />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/things-to-do" element={<ThingsToDo />} />
+            <Route path="/packages" element={<Packages />} />
+            <Route path="/events/:slug" element={<EventDetail />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <Analytics />

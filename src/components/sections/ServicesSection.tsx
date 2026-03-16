@@ -1,15 +1,65 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Flower2, Lamp, Users, GlassWater, Sparkles, HeartHandshake, Crown } from "lucide-react";
+import {
+  MapPin,
+  Flower2,
+  Utensils,
+  Camera,
+  Music2,
+  Sparkles,
+  Gem,
+  Drum,
+} from "lucide-react";
 
 const services = [
-  { icon: Crown, title: "Destination Wedding Planning", desc: "Complete end-to-end planning for your dream destination wedding in Jim Corbett." },
-  { icon: Flower2, title: "Wedding Decor & Design", desc: "Stunning floral arrangements, themed setups, and custom wedding décor designs." },
-  { icon: Sparkles, title: "Mandap & Stage Setup", desc: "Grand mandap designs, elegant stage setups, and entrance decorations." },
-  { icon: GlassWater, title: "Cocktail Bar & Entertainment", desc: "Professional molecular bar setups, signature cocktails, and entertainment." },
-  { icon: Lamp, title: "Lighting & Event Production", desc: "Dramatic lighting designs, sound systems, and complete event production." },
-  { icon: Users, title: "Wedding Workforce & Staff", desc: "Professional event crews, logistics teams, and setup personnel." },
-  { icon: HeartHandshake, title: "Guest Hospitality", desc: "Complete guest management including accommodation and activity coordination." },
+  {
+    icon: MapPin,
+    title: "Venue Selection & Booking",
+    desc: "We shortlist the best resorts in Jim Corbett for your budget, arrange site visits and handle all booking and contract negotiations.",
+    slug: "venue-selection",
+  },
+  {
+    icon: Flower2,
+    title: "Decor & Design",
+    desc: "Fresh flowers, floral mandap, entrance gate, reception stage, photo-op walls and full venue transformation to match your theme.",
+    slug: "decor-design",
+  },
+  {
+    icon: Utensils,
+    title: "Catering & Menu Planning",
+    desc: "Multi-cuisine buffet, live cooking counters, welcome drinks, sweet stations and professional catering teams for your full guest count.",
+    slug: "catering-menu",
+  },
+  {
+    icon: Camera,
+    title: "Photography & Videography",
+    desc: "Candid and portrait photography, drone shots, pre-wedding shoot at Corbett forest and cinematic wedding films.",
+    slug: "photography-video",
+  },
+  {
+    icon: Music2,
+    title: "Entertainment & Cultural Program",
+    desc: "Professional DJ, live singers, Sangeet night anchor, folk performers, bonfires, jungle safari and fireworks for your guests.",
+    slug: "entertainment",
+  },
+  {
+    icon: Sparkles,
+    title: "Bridal Makeup",
+    desc: "HD and airbrush bridal makeup, hairstyling, touch-up service throughout the day and coverage for all wedding functions.",
+    slug: "bridal-makeup",
+  },
+  {
+    icon: Gem,
+    title: "Jewellery & Accessories",
+    desc: "Bridal jewellery styling, accessory coordination, floral jewellery, groom's accessories and pre-wedding look trial.",
+    slug: "jewellery-accessories",
+  },
+  {
+    icon: Drum,
+    title: "Band, Ghoriwala, Baggi",
+    desc: "Decorated ghori or baggi for the groom, live brass band, dhol players, bhangra performers and full baraat procession setup.",
+    slug: "band-ghoriwala-baggi",
+  },
 ];
 
 const ServicesSection = () => {
@@ -22,40 +72,51 @@ const ServicesSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <p className="text-gold font-body text-sm tracking-[0.3em] uppercase mb-3">What We Offer</p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-4">
+          <p className="text-gold font-body text-sm tracking-[0.3em] uppercase mb-3">
+            What We Offer
+          </p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-5">
             Our Wedding Services
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            From concept to celebration, we deliver comprehensive wedding and event services
-            tailored to create your perfect destination wedding experience.
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            One experienced team handles everything for your destination wedding
+            in Jim Corbett — so you can actually enjoy your own wedding.
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, i) => (
             <motion.div
               key={service.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="group bg-card border border-border rounded-lg p-6 hover:shadow-xl hover:border-gold/30 transition-all duration-300"
+              transition={{ delay: i * 0.08 }}
             >
-              <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-gold/20 transition-colors">
-                <service.icon className="h-6 w-6 text-gold" />
-              </div>
-              <h3 className="font-display text-xl font-semibold text-foreground mb-2">{service.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{service.desc}</p>
+              <Link
+                to={`/services#${service.slug}`}
+                className="group block h-full bg-card border border-border rounded-xl p-6 hover:shadow-xl hover:border-gold/30 transition-all duration-300"
+              >
+                <div className="h-14 w-14 rounded-full bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-gold/20 transition-colors duration-300">
+                  <service.icon className="h-7 w-7 text-gold" />
+                </div>
+                <h3 className="font-display text-xl font-bold text-foreground mb-3 leading-tight">
+                  {service.title}
+                </h3>
+                <p className="text-base text-muted-foreground leading-relaxed">
+                  {service.desc}
+                </p>
+              </Link>
             </motion.div>
           ))}
         </div>
 
         <div className="text-center mt-12">
-          <Link to="/services">
-            <button className="text-gold font-semibold hover:text-gold-light transition-colors underline underline-offset-4">
-              View All Services →
-            </button>
+          <Link
+            to="/services"
+            className="text-gold font-semibold text-lg hover:text-gold-light transition-colors underline underline-offset-4"
+          >
+            See Full Service Details →
           </Link>
         </div>
       </div>

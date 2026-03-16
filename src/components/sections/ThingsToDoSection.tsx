@@ -3,11 +3,11 @@ import { Binoculars, Church, Waves, TreeDeciduous, Hotel } from "lucide-react";
 import safariImg from "@/assets/jungle-safari.jpg";
 
 const activities = [
-  { icon: Binoculars, title: "Jungle Safari in Jim Corbett", desc: "Experience thrilling wildlife safaris and spot the Royal Bengal Tiger." },
-  { icon: Church, title: "Visit Garjiya Devi Temple", desc: "A sacred hilltop temple on the banks of the Kosi River." },
-  { icon: Waves, title: "Explore the Kosi River", desc: "River rafting, fishing, and serene riverside walks." },
-  { icon: TreeDeciduous, title: "Nature Walks & Bird Watching", desc: "Over 600 bird species and scenic nature trails to explore." },
-  { icon: Hotel, title: "Luxury Resort Experiences", desc: "World-class spas, infinity pools, and fine dining at premium resorts." },
+  { icon: Binoculars, title: "Jungle Safari", desc: "Take your guests on a jungle safari — spot tigers, elephants, and deer." },
+  { icon: Church, title: "Garjiya Devi Temple", desc: "A famous temple on a hill by the Kosi River — great for a family visit." },
+  { icon: Waves, title: "Kosi River", desc: "Riverside walks, fishing, and rafting — your guests will love it." },
+  { icon: TreeDeciduous, title: "Nature Walks & Bird Watching", desc: "Beautiful walking trails and 600+ bird species all around Corbett." },
+  { icon: Hotel, title: "Resort Activities", desc: "Swimming pool, spa, bonfire nights, and good food at the resort." },
 ];
 
 const ThingsToDoSection = () => {
@@ -28,8 +28,8 @@ const ThingsToDoSection = () => {
               Things to Do in Corbett
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Make your destination wedding a complete experience. Jim Corbett offers
-              exciting activities for your wedding guests to enjoy.
+              Your guests won't just attend the wedding — they'll have a mini
+              vacation. Here's what they can do in Jim Corbett.
             </p>
 
             <div className="space-y-5">

@@ -57,8 +57,8 @@ const Contact = () => {
     <Layout>
       <SEOHead
         title="Contact Us"
-        description="Get in touch with VJ Events for destination wedding planning in Jim Corbett. Call +91 6398877687 or email vjevents@gmail.com for a free consultation."
-        keywords="contact vj events, wedding planner contact corbett, book wedding consultation"
+        description="Contact VJ Events for your destination wedding in Jim Corbett. Call +91 6398877687 or fill our form. Free consultation."
+        keywords="contact wedding planner corbett, book wedding jim corbett, wedding enquiry corbett, vj events phone number"
       />
 
       <section className="relative py-24 lg:py-32 bg-primary">
@@ -75,7 +75,7 @@ const Contact = () => {
               Contact VJ Events
             </h1>
             <p className="text-primary-foreground/70 text-lg">
-              Ready to plan your dream wedding? We'd love to hear from you.
+              Planning a wedding in Jim Corbett? Talk to us — we'll help you get started.
             </p>
           </motion.div>
         </div>
@@ -90,9 +90,9 @@ const Contact = () => {
                 Let's Plan Your Wedding
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Whether you have a clear vision or need inspiration, our team is
-                here to guide you through every step of planning your
-                destination wedding in Jim Corbett.
+                Whether you know exactly what you want or need help figuring it
+                out — just call or message us. We'll guide you through
+                everything step by step.
               </p>
 
               <div className="space-y-6 mb-10">
@@ -219,10 +219,10 @@ const Contact = () => {
                 ))}
                 <div>
                   <label className="text-sm font-medium text-foreground mb-1 block">
-                    Tell Us About Your Wedding Vision
+                    Tell Us About Your Wedding
                   </label>
                   <textarea
-                    placeholder="Describe your dream wedding..."
+                    placeholder="Tell us what you're looking for — budget, theme, any special requests..."
                     rows={4}
                     className="w-full px-4 py-3 rounded-md border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 resize-none"
                     value={formData.message}

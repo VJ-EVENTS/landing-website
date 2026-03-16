@@ -24,12 +24,12 @@ const HeroSection = () => {
             Jim Corbett National Park, Uttarakhand
           </p>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-primary-foreground leading-tight mb-6">
-            Luxury Destination Weddings in{" "}
+            Destination Weddings in{" "}
             <span className="text-gold-gradient">Jim Corbett</span>
           </h1>
           <p className="text-lg md:text-xl text-primary-foreground/80 font-body font-light leading-relaxed mb-8 max-w-xl">
-            Create unforgettable wedding experiences surrounded by nature and
-            luxury resorts in Corbett with VJ Events.
+            Plan your dream wedding in the forests and resorts of Jim Corbett.
+            We handle everything — decor, food, DJ, and guest management.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link to="/contact">

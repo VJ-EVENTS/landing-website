@@ -6,10 +6,11 @@ import vjLogo from "@/assets/vj-logo.png";
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
+  { label: "How We Plan", href: "/about" },
   { label: "Services", href: "/services" },
   { label: "Destination Weddings", href: "/destination-weddings" },
   { label: "Gallery", href: "/gallery" },
+  { label: "Packages", href: "/packages" },
   { label: "Venues", href: "/venues" },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
@@ -24,10 +25,18 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center gap-3">
-            <img src={vjLogo} alt="VJ Events Logo" className="h-12 w-12 object-contain" />
+            <img
+              src={vjLogo}
+              alt="VJ Events Logo"
+              className="h-12 w-12 object-contain"
+            />
             <div>
-              <span className="text-2xl font-display font-bold text-primary-foreground">VJ Events</span>
-              <p className="text-xs text-gold-light tracking-[0.2em] uppercase">Jim Corbett</p>
+              <span className="text-2xl font-display font-bold text-primary-foreground">
+                VJ Events
+              </span>
+              <p className="text-xs text-gold-light tracking-[0.2em] uppercase">
+                Jim Corbett
+              </p>
             </div>
           </Link>
 
@@ -48,7 +57,10 @@ const Header = () => {
           </nav>
 
           <div className="hidden lg:flex items-center gap-3">
-            <a href="tel:+916398877687" className="flex items-center gap-2 text-gold text-sm font-medium">
+            <a
+              href="tel:+916398877687"
+              className="flex items-center gap-2 text-gold text-sm font-medium"
+            >
               <Phone className="h-4 w-4" />
               +91 6398877687
             </a>
@@ -86,7 +98,10 @@ const Header = () => {
                 </Link>
               ))}
               <div className="mt-4 px-4">
-                <a href="tel:+916398877687" className="flex items-center gap-2 text-gold text-sm font-medium mb-3">
+                <a
+                  href="tel:+916398877687"
+                  className="flex items-center gap-2 text-gold text-sm font-medium mb-3"
+                >
                   <Phone className="h-4 w-4" />
                   +91 6398877687
                 </a>
