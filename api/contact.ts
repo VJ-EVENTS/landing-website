@@ -32,7 +32,7 @@ export default async function handler(req: any, res: any) {
 
     await transporter.sendMail({
       from: process.env.SMTP_FROM || process.env.SMTP_USER,
-      to: "vjevents@gmail.com",
+      to: "user892342@gmail.com",
       subject: `Wedding Enquiry from ${name}`,
       text: `
 Name: ${name}
