@@ -19,6 +19,7 @@ import {
   Flower2,
   Camera,
   Car,
+  Info,
 } from "lucide-react";
 
 const packages = [
@@ -27,7 +28,7 @@ const packages = [
     name: "Budget Wedding",
     guests: "50 – 100 Guests",
     duration: "1 Day",
-    price: "2 – 5",
+    price: "12 – 18",
     popular: false,
     description:
       "A simple and beautiful wedding in Jim Corbett that fits your budget. Great for small families who want a nice celebration without spending too much.",
@@ -45,7 +46,7 @@ const packages = [
     name: "Classic Destination Wedding",
     guests: "100 – 200 Guests",
     duration: "2 Days / 1 Night",
-    price: "5 – 10",
+    price: "20 – 32",
     popular: true,
     description:
       "Our best-selling package — everything you need for a destination wedding in Corbett. Good decor, tasty food, DJ, and a planner to handle it all.",
@@ -65,7 +66,7 @@ const packages = [
     name: "Premium Wedding",
     guests: "150 – 300 Guests",
     duration: "2 Days / 1 Night",
-    price: "10 – 18",
+    price: "35 – 55",
     popular: false,
     description:
       "For families who want a bigger, better wedding — with a grand stage, live music, cocktail evening, and full guest management.",
@@ -87,7 +88,7 @@ const packages = [
     name: "Luxury Experience",
     guests: "200+ Guests",
     duration: "3 Days / 2 Nights",
-    price: "18 – 35",
+    price: "60 – 90",
     popular: false,
     description:
       "A 3-day wedding at a top resort in Corbett. We take care of everything — decor, food, entertainment, travel, and stay for all your guests.",
@@ -110,38 +111,38 @@ const costBreakdown = [
   {
     icon: MapPin,
     title: "Venue & Resort",
-    range: "₹50,000 – 3 Lakh",
-    note: "Depends on resort tier and guest count",
+    range: "₹6 – 20 Lakh",
+    note: "Depends on resort tier, lawn size and guest count",
   },
   {
     icon: Utensils,
     title: "Food & Beverage",
-    range: "₹600 – 1,800 / plate",
-    note: "Veg & non-veg buffet options",
+    range: "₹1,500 – 3,500 / plate",
+    note: "Veg & non-veg multi-cuisine buffet",
   },
   {
     icon: Flower2,
     title: "Decor & Mandap",
-    range: "₹50,000 – 3 Lakh",
-    note: "Basic floral to themed setups",
+    range: "₹2 – 10 Lakh",
+    note: "Basic floral to designer themed setups",
   },
   {
     icon: Music,
     title: "DJ & Entertainment",
-    range: "₹15,000 – 60,000",
-    note: "DJ nights, live music, performances",
+    range: "₹50,000 – 2.5 Lakh",
+    note: "DJ nights, live music, anchor & performances",
   },
   {
     icon: Camera,
-    title: "Photography",
-    range: "₹25,000 – 1.5 Lakh",
-    note: "Pre-wedding, ceremony & cinematic film",
+    title: "Photography & Video",
+    range: "₹80,000 – 4 Lakh",
+    note: "Pre-wedding shoot, ceremony & cinematic film",
   },
   {
     icon: Car,
     title: "Transport & Logistics",
-    range: "₹15,000 – 80,000",
-    note: "Guest transfers from Ramnagar / Delhi",
+    range: "₹40,000 – 1.5 Lakh",
+    note: "Guest transfers from Ramnagar / Delhi NCR",
   },
 ];
 
@@ -150,7 +151,7 @@ const Packages = () => {
     <Layout>
       <SEOHead
         title="Wedding Packages & Pricing"
-        description="Destination wedding packages in Jim Corbett starting from ₹2 Lakh. Budget, mid-range & premium options. Check prices and book your wedding today."
+        description="Destination wedding packages in Jim Corbett starting from ₹12 Lakh. Budget, mid-range & premium options. Check prices and book your wedding today."
         keywords="jim corbett wedding package price, destination wedding cost corbett, cheap wedding planner corbett, wedding in corbett budget, corbett wedding booking"
       />
 
@@ -175,6 +176,23 @@ const Packages = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Disclaimer Banner */}
+      <div className="bg-gold/10 border-y border-gold/25">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex items-start gap-3 max-w-4xl mx-auto">
+            <Info className="h-5 w-5 text-gold shrink-0 mt-0.5" />
+            <p className="text-sm text-foreground leading-relaxed">
+              <span className="font-semibold">Please note:</span> All prices
+              shown on this page are general estimates to give you a starting
+              point. Every wedding is different — your actual package price will
+              be customised based on your guest count, venue choice, selected
+              services, date, and specific requirements. Contact us for a
+              personalised quote at no charge.
+            </p>
+          </div>
+        </div>
+      </div>
 
       {/* Packages Grid */}
       <section className="py-20 bg-background">

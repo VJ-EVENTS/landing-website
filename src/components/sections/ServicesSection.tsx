@@ -9,6 +9,8 @@ import {
   Sparkles,
   Gem,
   Drum,
+  GlassWater,
+  HeartHandshake,
 } from "lucide-react";
 
 const services = [
@@ -57,8 +59,20 @@ const services = [
   {
     icon: Drum,
     title: "Band, Ghoriwala, Baggi",
-    desc: "Decorated ghori or baggi for the groom, live brass band, dhol players, bhangra performers and full baraat procession setup.",
+    desc: "Ghori, royal baggi, Baraat on Wheels DJ truck with CO2 guns, live brass band, dhol players and bhangra performers.",
     slug: "band-ghoriwala-baggi",
+  },
+  {
+    icon: GlassWater,
+    title: "Bar Setup & Management",
+    desc: "Themed bar counter, trained bartenders, custom cocktail menu, welcome drinks, champagne tower and Bar-on-Wheels option.",
+    slug: "bar-setup",
+  },
+  {
+    icon: HeartHandshake,
+    title: "Hospitality Team",
+    desc: "Dedicated guest management — welcome desk, pickups, room coordination, 24×7 helpdesk and shadow team for both families.",
+    slug: "hospitality-team",
   },
 ];
 

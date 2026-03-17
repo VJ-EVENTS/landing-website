@@ -68,14 +68,34 @@ const Footer = () => {
             <h3 className="font-display text-xl font-semibold text-gold mb-4">
               Our Services
             </h3>
-            <ul className="space-y-2 text-sm text-primary-foreground/70">
-              <li>Destination Wedding Planning</li>
-              <li>Wedding Decor & Design</li>
-              <li>Mandap & Stage Setup</li>
-              <li>Cocktail Bar Setup</li>
-              <li>Lighting & Event Production</li>
-              <li>Guest Hospitality</li>
-              <li>Event Workforce</li>
+            <ul className="space-y-2">
+              {[
+                { label: "Venue Selection & Booking", id: "venue-selection" },
+                { label: "Decor & Design", id: "decor-design" },
+                { label: "Catering & Menu Planning", id: "catering-menu" },
+                { label: "Photography & Videography", id: "photography-video" },
+                {
+                  label: "Entertainment & Cultural Program",
+                  id: "entertainment",
+                },
+                { label: "Bridal Makeup", id: "bridal-makeup" },
+                {
+                  label: "Jewellery & Accessories",
+                  id: "jewellery-accessories",
+                },
+                { label: "Band, Ghoriwala, Baggi", id: "band-ghoriwala-baggi" },
+                { label: "Bar Setup & Management", id: "bar-setup" },
+                { label: "Hospitality Team", id: "hospitality-team" },
+              ].map((s) => (
+                <li key={s.id}>
+                  <Link
+                    to={`/services#${s.id}`}
+                    className="text-sm text-primary-foreground/70 hover:text-gold transition-colors"
+                  >
+                    {s.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 

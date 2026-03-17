@@ -24,13 +24,13 @@ const venues = [
     capacity: "120+",
     image: haldiImg,
     roomTypes: [
-      { type: "Standard Room", price: "₹1,500 – 2,500" },
-      { type: "Deluxe Room", price: "₹2,500 – 3,500" },
-      { type: "Family Room", price: "₹3,500 – 4,500" },
+      { type: "Standard Room", price: "₹3,500 – 5,500" },
+      { type: "Deluxe Room", price: "₹5,500 – 7,500" },
+      { type: "Family Room", price: "₹7,500 – 9,500" },
     ],
     highlights: [
-      "Cheapest wedding venue in Corbett",
-      "Food starts at ₹550 per plate",
+      "Budget-friendly wedding venue in Corbett",
+      "Food starts at ₹900 per plate",
       "Garden area for small functions",
       "Best for families on a tight budget",
     ],
@@ -43,13 +43,13 @@ const venues = [
     capacity: "150+",
     image: safariImg,
     roomTypes: [
-      { type: "Standard Room", price: "₹2,000 – 3,000" },
-      { type: "Deluxe Room", price: "₹3,000 – 4,500" },
-      { type: "Suite", price: "₹4,500 – 6,000" },
+      { type: "Standard Room", price: "₹5,000 – 7,000" },
+      { type: "Deluxe Room", price: "₹7,000 – 9,500" },
+      { type: "Suite", price: "₹9,500 – 12,000" },
     ],
     highlights: [
       "Big 5-acre property near Jhirna zone",
-      "Veg ₹800 / Non-veg ₹1,100 per plate",
+      "Veg ₹1,200 / Non-veg ₹1,600 per plate",
       "Open lawn for wedding functions",
       "Good for big guest lists on a budget",
     ],
@@ -62,13 +62,13 @@ const venues = [
     capacity: "150+",
     image: heroImg,
     roomTypes: [
-      { type: "Deluxe Room", price: "₹2,500 – 3,500" },
-      { type: "Cottage", price: "₹3,500 – 5,000" },
-      { type: "Suite", price: "₹5,000 – 7,000" },
+      { type: "Deluxe Room", price: "₹5,500 – 7,500" },
+      { type: "Cottage", price: "₹7,500 – 10,000" },
+      { type: "Suite", price: "₹10,000 – 13,000" },
     ],
     highlights: [
       "Resort next to the river with lawns",
-      "Wedding packages from ₹3 Lakh",
+      "Wedding packages from ₹12 Lakh",
       "Their own catering & decor team",
       "Bonfire area for evening parties",
     ],
@@ -81,9 +81,9 @@ const venues = [
     capacity: "150+",
     image: lightingImg,
     roomTypes: [
-      { type: "Standard Room", price: "₹2,500 – 3,500" },
-      { type: "Deluxe Room", price: "₹3,500 – 5,000" },
-      { type: "Premium Room", price: "₹5,000 – 7,000" },
+      { type: "Standard Room", price: "₹6,000 – 8,500" },
+      { type: "Deluxe Room", price: "₹8,500 – 11,000" },
+      { type: "Premium Room", price: "₹11,000 – 14,000" },
     ],
     highlights: [
       "Mandap setup near the creek",
@@ -100,9 +100,9 @@ const venues = [
     capacity: "200+",
     image: decorImg,
     roomTypes: [
-      { type: "Cottage Room", price: "₹3,000 – 4,500" },
-      { type: "Pool Facing Room", price: "₹3,500 – 5,000" },
-      { type: "Family Cottage (4-bed)", price: "₹5,500 – 7,000" },
+      { type: "Cottage Room", price: "₹7,000 – 10,000" },
+      { type: "Pool Facing Room", price: "₹9,000 – 12,000" },
+      { type: "Family Cottage (4-bed)", price: "₹13,000 – 16,000" },
     ],
     highlights: [
       "Close to the national park gate",
@@ -119,13 +119,13 @@ const venues = [
     capacity: "180+",
     image: cocktailImg,
     roomTypes: [
-      { type: "Cave Room", price: "₹3,500 – 5,000" },
-      { type: "Deluxe Cave Suite", price: "₹5,000 – 7,500" },
-      { type: "Premium Suite", price: "₹7,500 – 10,000" },
+      { type: "Cave Room", price: "₹7,500 – 10,500" },
+      { type: "Deluxe Cave Suite", price: "₹10,500 – 14,000" },
+      { type: "Premium Suite", price: "₹14,000 – 18,000" },
     ],
     highlights: [
       "Unique cave-style rooms — looks amazing",
-      "Food ₹1,000 – 1,400 per plate",
+      "Food ₹1,500 – 2,200 per plate",
       "Swimming pool & bar",
       "Great photo spots everywhere",
     ],
@@ -138,9 +138,9 @@ const venues = [
     capacity: "180+",
     image: safariImg,
     roomTypes: [
-      { type: "Superior Room", price: "₹3,500 – 5,000" },
-      { type: "Deluxe Room", price: "₹5,000 – 7,000" },
-      { type: "Suite", price: "₹7,000 – 9,000" },
+      { type: "Superior Room", price: "₹8,000 – 11,000" },
+      { type: "Deluxe Room", price: "₹11,000 – 14,000" },
+      { type: "Suite", price: "₹14,000 – 18,000" },
     ],
     highlights: [
       "Located near Mohan, by the riverside",
@@ -157,9 +157,9 @@ const venues = [
     capacity: "200+",
     image: sangeetImg,
     roomTypes: [
-      { type: "Garden Cottage", price: "₹5,000 – 7,000" },
-      { type: "River Cottage", price: "₹7,000 – 9,000" },
-      { type: "Suite Cottage", price: "₹9,000 – 12,000" },
+      { type: "Garden Cottage", price: "₹10,000 – 14,000" },
+      { type: "River Cottage", price: "₹14,000 – 18,000" },
+      { type: "Suite Cottage", price: "₹18,000 – 24,000" },
     ],
     highlights: [
       "Big 13-acre property by the river",
@@ -176,9 +176,9 @@ const venues = [
     capacity: "200+",
     image: corbettImg,
     roomTypes: [
-      { type: "Premium Room", price: "₹6,000 – 8,000" },
-      { type: "Superior Room", price: "₹8,000 – 10,000" },
-      { type: "Suite", price: "₹10,000 – 14,000" },
+      { type: "Premium Room", price: "₹12,000 – 16,000" },
+      { type: "Superior Room", price: "₹16,000 – 20,000" },
+      { type: "Suite", price: "₹20,000 – 28,000" },
     ],
     highlights: [
       "Right next to Kosi River",
@@ -195,9 +195,9 @@ const venues = [
     capacity: "80",
     image: mehendiImg,
     roomTypes: [
-      { type: "Bush Cottage", price: "₹5,500 – 7,000" },
-      { type: "Luxury Cottage", price: "₹7,000 – 9,000" },
-      { type: "Premium Cottage", price: "₹9,000 – 12,000" },
+      { type: "Bush Cottage", price: "₹11,000 – 14,000" },
+      { type: "Luxury Cottage", price: "₹14,000 – 18,000" },
+      { type: "Premium Cottage", price: "₹18,000 – 24,000" },
     ],
     highlights: [
       "Small cozy resort — very private",
@@ -214,10 +214,10 @@ const venues = [
     capacity: "250+",
     image: haldiImg,
     roomTypes: [
-      { type: "Deluxe Room", price: "₹4,500 – 6,500" },
-      { type: "Super Deluxe Cottage", price: "₹6,500 – 8,500" },
-      { type: "Duplex Room", price: "₹8,500 – 10,000" },
-      { type: "Family Cottage", price: "₹10,000 – 12,000" },
+      { type: "Deluxe Room", price: "₹10,000 – 13,000" },
+      { type: "Super Deluxe Cottage", price: "₹13,000 – 16,000" },
+      { type: "Duplex Room", price: "₹16,000 – 20,000" },
+      { type: "Family Cottage", price: "₹20,000 – 25,000" },
     ],
     highlights: [
       "Mountain & river views",
@@ -234,9 +234,9 @@ const venues = [
     capacity: "200+",
     image: lightingImg,
     roomTypes: [
-      { type: "Jungle Cat Room", price: "₹6,500 – 8,500" },
-      { type: "Leopard Cat Room", price: "₹8,500 – 11,000" },
-      { type: "Spotted Cat Suite", price: "₹11,000 – 14,000" },
+      { type: "Jungle Cat Room", price: "₹13,000 – 17,000" },
+      { type: "Leopard Cat Room", price: "₹17,000 – 22,000" },
+      { type: "Spotted Cat Suite", price: "₹22,000 – 28,000" },
     ],
     highlights: [
       "Mountains in the background",
@@ -253,9 +253,9 @@ const venues = [
     capacity: "300+",
     image: heroImg,
     roomTypes: [
-      { type: "Superior Room", price: "₹8,000 – 12,000" },
-      { type: "Garden View Room", price: "₹12,000 – 16,000" },
-      { type: "Suite", price: "₹16,000 – 22,000" },
+      { type: "Superior Room", price: "₹16,000 – 22,000" },
+      { type: "Garden View Room", price: "₹22,000 – 28,000" },
+      { type: "Suite", price: "₹28,000 – 40,000" },
     ],
     highlights: [
       "Lawn right by the river + gardens",
@@ -272,9 +272,9 @@ const venues = [
     capacity: "400+",
     image: decorImg,
     roomTypes: [
-      { type: "Deluxe Room", price: "₹8,000 – 12,000" },
-      { type: "Executive Suite", price: "₹14,000 – 18,000" },
-      { type: "Premium Suite", price: "₹18,000 – 25,000" },
+      { type: "Deluxe Room", price: "₹18,000 – 25,000" },
+      { type: "Executive Suite", price: "₹28,000 – 35,000" },
+      { type: "Premium Suite", price: "₹35,000 – 50,000" },
     ],
     highlights: [
       "Huge event space (5,000+ sq m)",
@@ -298,7 +298,7 @@ const Venues = () => {
     <Layout>
       <SEOHead
         title="Top Wedding Venues & Resort Prices in Jim Corbett"
-        description="Check room prices of 14+ wedding resorts in Jim Corbett. Rooms start from ₹1,500/night. Compare budget, mid-range & premium resorts for your wedding."
+        description="Check room prices of 14+ wedding resorts in Jim Corbett. Rooms start from ₹3,500/night. Compare budget, mid-range & premium resorts for your wedding."
         keywords="jim corbett resort price, wedding resort corbett, resort room rates corbett, best resort for wedding in corbett, cheap resort jim corbett wedding, corbett resort tariff"
       />
 

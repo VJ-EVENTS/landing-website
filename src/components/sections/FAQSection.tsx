@@ -9,7 +9,7 @@ import {
 const faqs = [
   {
     q: "How much does a destination wedding in Jim Corbett cost?",
-    a: "It depends on your guest count, which resort you pick, and what kind of decor and food you want. Our packages start from ₹2 Lakh for a small wedding and go up to ₹35 Lakh for a big 3-day celebration. Call us with your budget and we'll tell you what's possible.",
+    a: "It depends on your guest count, which resort you pick, and what kind of decor and food you want. Our packages start from ₹12 Lakh for a small wedding and go up to ₹90 Lakh for a big 3-day luxury celebration. Call us with your budget and we'll tell you what's possible.",
   },
   {
     q: "Which resorts in Jim Corbett are good for weddings?",
@@ -43,12 +43,15 @@ const FAQSection = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <p className="text-gold font-body text-sm tracking-[0.3em] uppercase mb-3">FAQ</p>
+          <p className="text-gold font-body text-sm tracking-[0.3em] uppercase mb-3">
+            FAQ
+          </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-4">
             Frequently Asked Questions
           </h2>
           <p className="text-muted-foreground">
-            Common questions about planning a wedding in Jim Corbett — answered simply.
+            Common questions about planning a wedding in Jim Corbett — answered
+            simply.
           </p>
         </motion.div>
 

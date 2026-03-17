@@ -38,6 +38,42 @@ const locations = [
     resorts: "Tarangi, Namah, Taj Corbett, Riverview Retreat, Wood Castle",
   },
   {
+    name: "Nainital",
+    distance: "65 km from Ramnagar",
+    tagline: "The Lake District of Uttarakhand",
+    desc: "Nainital is one of the most romantic wedding destinations in Uttarakhand — and for good reason. The iconic Naini Lake, snow-capped peaks, pine forests and cool hill air create a naturally beautiful setting that no banquet hall can replicate. Most wedding resorts here have terraces and lawns that overlook the lake directly. The Naini Retreat, Shervani Hilltop and Manu Maharani are popular picks with colonial-era charm. The nearest railway station is Kathgodam, just 35 km away, making guest travel straightforward. Best season: March–May and September–November.",
+    highlights: [
+      "Naini Lake backdrop for outdoor ceremonies and photos",
+      "Snow-capped Himalayan peaks visible from most resort lawns",
+      "Cool, pleasant weather — perfect for outdoor functions",
+      "Kathgodam railway station just 35 km away",
+      "Heritage hotel and luxury resort options at varied budgets",
+    ],
+    bestFor:
+      "Lake-view weddings, hill ceremonies, couples who love colonial charm",
+    icon: Waves,
+    resorts:
+      "The Naini Retreat, Shervani Hilltop, Manu Maharani Hotel & Spa, Sea Hawk Hill Resort",
+  },
+  {
+    name: "Patkot",
+    distance: "15 km from Ramnagar",
+    tagline: "Luxury Resorts in the Shivalik Foothills",
+    desc: "Patkote is a serene area tucked in the Shivalik foothills near Ramnagar, right on the edge of Jim Corbett National Park. It combines the best of both worlds — luxury five-star resort facilities and a deeply natural, forest-surrounded setting. Club Mahindra Patkote and Paatlidun Safari Lodge are the standout properties here, offering sprawling lawns, private pool villas, Kumaoni folk experiences and easy access from Ramnagar station. The whole area feels quieter and more exclusive than Dhikuli, making it ideal for couples who want a premium experience with forest views.",
+    highlights: [
+      "Shivalik foothills setting with dense forest views all around",
+      "5-star resorts with private pool villas and luxury suites",
+      "Lawns accommodating up to 2,500 guests",
+      "50 minutes from Ramnagar Railway Station",
+      "Kumaoni folk performances, jungle safaris and spa within the resort",
+    ],
+    bestFor:
+      "Luxury weddings, premium resort experience, forest + five-star combination",
+    icon: TreePine,
+    resorts:
+      "Club Mahindra Patkote, Paatlidun Safari Lodge, Resorts by The Baagh",
+  },
+  {
     name: "Marchula",
     distance: "30 km from Ramnagar",
     tagline: "Riverside & Mountain Beauty",
@@ -124,9 +160,9 @@ const DestinationWeddings = () => {
   return (
     <Layout>
       <SEOHead
-        title="Destination Wedding Locations in Jim Corbett — Dhikuli, Marchula, Dhela & More"
-        description="Explore the best destination wedding locations in Jim Corbett — Dhikuli, Marchula, Dhela, Sawaldey, Kyari, and Choi. Find the perfect area for your wedding based on budget, guest count, and vibe."
-        keywords="destination wedding jim corbett, wedding locations corbett, dhikuli wedding, marchula wedding, dhela wedding, sawaldey wedding, kyari wedding, choi wedding, forest wedding uttarakhand, corbett wedding planner"
+        title="Destination Wedding Locations — Jim Corbett, Nainital, Patkot & More | VJ Events"
+        description="Explore the best destination wedding locations near Corbett — Dhikuli, Nainital, Patkot, Marchula, Dhela, Sawaldey, Kyari, and Choi. Find the perfect area for your wedding based on budget, guest count, and vibe."
+        keywords="destination wedding jim corbett, nainital destination wedding, patkot destination wedding, patkote ramnagar wedding, wedding locations corbett, dhikuli wedding, marchula wedding, dhela wedding, forest wedding uttarakhand, corbett wedding planner"
       />
 
       {/* Hero */}
@@ -152,9 +188,9 @@ const DestinationWeddings = () => {
               Wedding Locations in Jim Corbett
             </h1>
             <p className="text-primary-foreground/80 text-xl mb-8 max-w-2xl">
-              Jim Corbett has 6 popular areas where people do destination
-              weddings — each with a different vibe, budget, and experience.
-              Find the one that's right for you.
+              From Jim Corbett's forests to Nainital's lakes and Patkot's luxury
+              resorts — 8 stunning locations for your destination wedding, each
+              with a different vibe, budget, and experience.
             </p>
             <Link to="/contact">
               <Button
@@ -181,12 +217,12 @@ const DestinationWeddings = () => {
               Popular Areas
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-4">
-              6 Best Wedding Locations in Jim Corbett
+              8 Best Destination Wedding Locations
             </h2>
             <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-              Each location in Corbett has its own personality — from grand
-              riverside resorts to quiet forest cottages. Here's what each area
-              offers for your wedding.
+              From Jim Corbett's riverside resorts and jungle lodges to
+              Nainital's lakeside heritage hotels and Pathankot's grand hill
+              resorts — here's what each location offers for your wedding.
             </p>
           </motion.div>
 

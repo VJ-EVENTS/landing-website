@@ -50,7 +50,7 @@ const Index = () => {
         </title>
         <meta
           name="description"
-          content="VJ Events — destination wedding planner in Jim Corbett. We handle decor, mandap, DJ, food, guest management & everything for your wedding. Packages from ₹2 Lakh."
+          content="VJ Events — destination wedding planner in Jim Corbett. We handle decor, mandap, DJ, food, guest management & everything for your wedding. Packages from ₹12 Lakh."
         />
         <meta
           name="keywords"
@@ -62,7 +62,7 @@ const Index = () => {
         />
         <meta
           property="og:description"
-          content="Plan your destination wedding in Jim Corbett with VJ Events. Beautiful resorts, great decor, and affordable packages starting from ₹2 Lakh."
+          content="Plan your destination wedding in Jim Corbett with VJ Events. Beautiful resorts, great decor, and affordable packages starting from ₹12 Lakh."
         />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://vjevents.in" />

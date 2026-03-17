@@ -50,8 +50,8 @@ const GalleryPreview = () => {
             Photos & Videos
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            See photos and videos from real weddings we've planned in Jim
-            Corbett — decor, ceremonies, and full wedding films.
+            See photos and videos from weddings we've planned in Jim Corbett —
+            decor, ceremonies, and full wedding films.
           </p>
         </motion.div>
 

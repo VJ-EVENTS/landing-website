@@ -190,7 +190,7 @@ const Gallery = () => {
               Photos & Videos
             </h1>
             <p className="text-primary-foreground/70 text-xl max-w-2xl mx-auto">
-              Real weddings we've planned in Jim Corbett — from decor setups and
+              Weddings we've planned in Jim Corbett — from decor setups and
               ceremony moments to full wedding highlight films.
             </p>
           </motion.div>
