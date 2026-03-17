@@ -7,12 +7,12 @@ const FAQ = () => {
   return (
     <Layout>
       <SEOHead
-        title="FAQ - Destination Wedding Questions"
-        description="Common questions about destination weddings in Jim Corbett — cost, best time, resorts, food, and more. Answered by VJ Events."
-        keywords="destination wedding questions corbett, how much wedding cost corbett, best time for wedding jim corbett, wedding faq corbett"
+        title="FAQ — Destination Wedding & Jim Corbett Questions | VJ Events"
+        description="All your questions about destination weddings in Jim Corbett answered — cost, resorts, safari zones, hot air balloon, elephant safari, activities, food, and more."
+        keywords="destination wedding faq corbett, jim corbett safari faq, hot air balloon corbett, elephant safari corbett, jim corbett activities, wedding cost corbett, best time wedding jim corbett, jungle safari wedding guests corbett"
       />
       <div className="pt-8">
-        <FAQSection />
+        <FAQSection showAll={true} />
       </div>
       <CTASection />
     </Layout>
